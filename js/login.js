@@ -1,4 +1,4 @@
-var ip = "http://192.168.0.25:9999/realfit/";
+var ip = "http://148.220.210.92:9999/realfit/";
 function entrar(){
 	usuario = document.getElementById('username');
 	password = document.getElementById('password');
@@ -31,7 +31,7 @@ function entrar(){
 	if (!desconectadoInternet) {
 		if(usuarioColocado && passwordColocado){
 			loginAjax = new XMLHttpRequest();
-			loginAjax.open('POST', 'http://192.168.0.25:9999/realfit/php/login.php');
+			loginAjax.open('POST', 'http://148.220.210.92:9999/realfit/php/login.php');
 
 			loginAjax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
@@ -209,7 +209,7 @@ function registrarme(){
 
 						if (resultado == "ok") {
 										loginAjax = new XMLHttpRequest();
-						loginAjax.open('POST', 'http://192.168.0.25:9999/realfit/php/login.php');
+						loginAjax.open('POST', 'http://148.220.210.92:9999/realfit/php/login.php');
 
 						loginAjax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 

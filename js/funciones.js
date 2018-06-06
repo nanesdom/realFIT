@@ -1,4 +1,4 @@
-var ip = "http://192.168.0.25:9999/realfit/";
+var ip = "http://148.220.210.92:9999/realfit/";
 
 function signPOP(){
 	sign = document.getElementById("signup");
