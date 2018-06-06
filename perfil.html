@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>realFit</title>		
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script src="js/funciones.js"></script>
+	<script src="js/perfil.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="favicon.png">
+<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self'; 
+		script-src 'self' 'unsafe-inline'; 
+		style-src 'self' 'unsafe-inline' https://code.highcharts.com;
+		img-src *; 
+		font-src *;
+		connect-src *
+	">
+</head>
+<body onload="variable(), cargarContenido(), cargarMenu(), cargarPerfil()">
+	<div class="contenedor" id="contenedor">
+		<header>
+			<section class="right">
+				<i class="fa fa-leaf"></i>real<B>FIT</b>
+			</section>
+			<section class="left">
+				<i class="fa fa-bars" id="btnMenu" onclick="menu()"></i>
+			</section>
+		</header>
+		<div class="menu inactive" id="menu">
+			<span class="perfil">
+				<div class="imgPerfil">
+					<img src="media/male.jpg" id="fotoperfil">
+				</div>
+				<div class="dataPerfil">
+					<h1 id="tunombre">Daniel Domínguez</h1>
+					<h3 id="tuuser">@nanesdom</h3>
+					<h3 id="tuedad">21 años</h3>
+					<h3 id="tupeso">80 Kg</h3>					
+				</div>
+			</span>
+			<span class="boton" onclick="ir('dashboard.html')">
+				<i class="fa fa-home"></i>Inicio
+			</span>
+			<span class="boton" onclick="ir('#')">
+				<i class="fa fa-user"></i>Perfil
+			</span>
+			<span class="boton" onclick="ir('tips.html')">
+				<i class="fa fa-heartbeat"></i>Tips
+			</span>
+			<span class="boton" onclick="salir()">
+				<i class="fa fa-sign-out"></i>Salir
+			</span>
+		</div>
+
+		<div class="contenido">
+			<section class="datosp">
+				<div class="imgp">
+					<input type="text" name="" id="name" value="Daniel Dominguez" disabled="">
+					<img src="media/male.jpg" id="imgper">
+				</div>
+				<div class="info">
+					<h4>Género</h4>
+					<select id="gender" disabled="">
+					  	<option value="0" selected="">Hombre</option>
+					  	<option value="1">Mujer</option>
+					</select>
+					<h4>Edad</h4>
+					<input type="number" name="" id="age" value="21" disabled="">
+					<h4>Peso</h4>
+					<input type="number" name="" id="weight" value="80" disabled="">
+					<h4>Objetivo</h4>
+					<select id="objective" disabled="">
+					  	<option value="1" selected="" id="lose">Perder Grasa</option>
+					  	<option value="2">Aumentar Músculo</option>
+					  	<option value="3">Mantener</option>
+					</select>
+				</div>
+				<div class="btns">
+					<i class="fa fa-pencil" onclick="editUser()" id="editUser"></i>
+					<i class="fa fa-check" onclick="saveUser()" id="saveUser"></i>
+				</div>
+			</section>
+			<section class="weight">
+				<h2>Tu Evolución</h2>
+				<div id="container"></div>
+			</section>
+		</div>
+</body>
+</html>

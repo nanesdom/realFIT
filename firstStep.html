@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>realFit</title>		
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script src="js/funciones.js"></script>
+	<script src="js/firstStep.js"></script>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="favicon.png">
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self'; 
+		script-src 'self' 'unsafe-inline'; 
+		style-src 'self' ; 
+		img-src *; 
+		font-src *;
+		connect-src *
+	">
+</head>
+<body onload="variable(), cargarFirst()">
+	<div class="steps" id="steps">
+		<section class="text">
+			<h1 id="welcome">Bienvenido!</h1>
+			<h4 id="need">Necesitamos saber algunas cosas acerca de ti.</h4>
+		</section>
+		<section class="step1" id="step1">
+			
+			<div class="content">
+				<h3>Género</h3>
+				<select id="gender">
+				  	<option value="0" >Hombre</option>
+				  	<option value="1">Mujer</option>
+				</select>
+				<input type="number" name="" id="weight" placeholder="Peso">
+				<input type="number" name="" id="age" placeholder="Edad">
+				<h3>Actividad Fisica</h3>
+				<select id="activity">
+				  	<option value="1" selected="">Mala</option>
+				  	<option value="2">Media</option>
+				  	<option value="3">Buena</option>
+				</select>
+			</div>
+			<div class="button">
+				<button onclick="step2()">Siguiente</button>
+			</div>
+
+		</section>
+		<section class="step2" id="step2">
+			<div class="content">
+				<h3>¿Cuál es tu tipo de cuerpo?</h3>
+				<img src="media/small.png" onclick="step3('1')"><i class="fa fa-info-circle" onclick="openPop('cuerpo1')"></i>
+				<img src="media/mid.png" onclick="step3('2')"><i class="fa fa-info-circle" onclick="openPop('cuerpo2')"></i>
+				<img src="media/fat.png" onclick="step3('3')"><i class="fa fa-info-circle" onclick="openPop('cuerpo3')"></i>
+				<input type="number" name="" hidden="" id="body">
+			</div>
+		</section>
+
+		<div class="popup" id="cuerpo1">
+			<h1 class="close" onclick="closePop('cuerpo1')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Ectomorfo</h1>
+			<h4>Los individuos pertenecientes a este tipo somático suelen ser <b> delgados </b> con extremidades largas, igualmente su estructura osea es delgada. <br><br>
+			Suelen estar por debajo del peso considerado “normal” y tienen dificultades para ganar peso. Su metabolismo es acelerado , aprovechando muy poco de los alimentos ingeridos.
+			</h4>
+		</div>
+
+		<div class="popup" id="cuerpo2">
+			<h1 class="close" onclick="closePop('cuerpo2')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Mesomorfo</h1>
+			<h4>Los mesomorfos son propensos a desarrollar con más facilidad la masa y tonificación muscular, así como la fuerza. <br><br>
+			Su <b> metabolismo </b>es regular y no deben seguir dietas estrictas para mantenerse en forma, aunque deben vigilar más su peso ya que la tendencia a acumular grasas es mayor que en el caso de los ectomorfos.
+			</h4>
+		</div>
+
+		<div class="popup" id="cuerpo3">
+			<h1 class="close" onclick="closePop('cuerpo3')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Endomorfo</h1>
+			<h4>Los individuos endomorfos tienen <b> tendencia al sobrepeso </b>por el ritmo metabólico tan lento: acumulan grasa con facilidad. Suelen estar por encima del peso medio de la población.<br><br>
+			En cuanto a la relación con el  culturismo esto se traduce en que tienen que vigilar mucho más su dieta y seguirla muy estrictamente, así como realizar una mayor cantidad de trabajo aeróbico para mantenerse bajos en grasa.
+			</h4>
+		</div>
+
+		<section class="step3" id="step3">
+			<div class="content">
+				<h3>Selecciona un objetivo</h3>
+				<button onclick="step4('1')" id="lose">Perder Grasa</button>
+				<button onclick="step4('2')">Aumentar Músculo</button>
+				<button onclick="step4('3')">Mantener</button>
+				<input type="number" name="" hidden="" id="objective">
+			</div>
+		</section>
+		<section class="step4" id="step4">
+			<div class="content">
+				<h1>Listo!</h1>
+				<h3>Todo esto nos ayudará mucho. Gracias!</h3>
+			</div>
+			<div class="button">
+				<button onclick="start()">Empezar</button>
+			</div>
+		</section>
+	</div>
+	</div>
+	</div>
+	<footer class="progressFooter">
+		<div class="progress">
+		  <span id="progress"></span>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>realFit</title>		
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script src="js/funciones.js"></script>
+	<script src="js/dashboard.js"></script>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="favicon.png">
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self'; 
+		script-src 'self' 'unsafe-inline'; 
+		style-src 'self' ; 
+		img-src *; 
+		font-src *;
+		connect-src *
+	">
+</head>
+<body onload="variable(), cargarContenido(), validarFirst(), cargarEjercicio()">
+	<div class="contenedor" id="contenedor">
+		<header>
+			<section class="right">
+				<i class="fa fa-leaf"></i>real<B>FIT</b>
+			</section>
+			<section class="left">
+				<i class="fa fa-angle-left" onclick="ir('dashboard.html')"></i>
+			</section>
+		</header>
+		<div class="contenido" id="tuejercicio">
+			<!-- <iframe src="dietas/Endomorfo/Baja.pdf#page=1" width="100%" height="80%" type="application/pdf">
+								This browser does not support PDFs. Please download the PDF to view it: <a href="dietas/Endomorfo/Baja.pdf">Download PDF</a>
+			</iframe>
+			Si el PDF no carga, Puedes descargarlo dando click aquí: <a href="dietas/Endomorfo/Baja.pdf">Download PDF</a> -->
+		</div>
+</body>
+</html>

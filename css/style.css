@@ -1,0 +1,72 @@
+@import url(login.css);
+@import url(firstStep.css);
+@import url(dashboard.css);
+@import url(menu.css);
+@import url(tips.css);
+@import url(perfil.css);
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: 'PT Sans', sans-serif;
+	background: var(--color-contraste);
+	overflow: hidden;
+}
+
+:root{
+	--color-principal: #648c01;
+	--color-contraste: #f3fbec;
+	--color-contraste2: #00cec9;
+	--color-fondo: #2f5f02;
+	--color-diferente: #abce00;
+	--color-padre: #caefb3;
+}
+
+.contenedor{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	transition: all 3s;
+	overflow: hidden;
+}
+
+.contenido{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	height: calc(100% - 50px);
+}
+
+#mensaje, #mensaje2{
+	width: 100%;
+	height: 80px;	
+	color: white;
+	position: absolute;
+	top: -80px;
+	left: 0px;
+	line-height: 80px;
+	text-align: center;
+	font-size: .8em;
+	font-weight: bold;	
+	z-index: 999999999999999999999999999999;
+	}
+
+	#mensaje{
+		background: #e74c3c;
+	}
+
+	#mensaje2{
+		background: green;
+	}
+	#tudieta{
+		overflow: scroll !important;
+	}
+

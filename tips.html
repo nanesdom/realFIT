@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>realFit</title>		
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script src="js/funciones.js"></script>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="favicon.png">
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self'; 
+		script-src 'self' 'unsafe-inline'; 
+		style-src 'self' ; 
+		img-src *; 
+		font-src *;
+		connect-src *
+	">
+</head>
+<body onload="variable(), cargarContenido()">
+	<div class="contenedor" id="contenedor">
+		<header>
+			<section class="right">
+				<i class="fa fa-leaf"></i>real<B>FIT</b>
+			</section>
+			<section class="left">
+				<i class="fa fa-angle-left" onclick="ir('dashboard.html')"></i>
+			</section>
+		</header>
+
+		<div class="contenido">
+			<section class="objective">
+				<h1>&nbsp</h1>
+				<img src="media/tips.png">
+			</section>
+			<section class="day">
+				<div class="tips">
+					<h1 onclick="openPop('tip1')"><i class="fa fa-info-circle"></i>Tip 1</h1>
+					<h1 onclick="openPop('tip2')"><i class="fa fa-info-circle"></i>Tip 2</h1>
+					<h1 onclick="openPop('tip3')"><i class="fa fa-info-circle"></i>Tip 3</h1>
+					<h1 onclick="openPop('tip4')"><i class="fa fa-info-circle"></i>Tip 4</h1>
+					<h1 onclick="openPop('tip5')"><i class="fa fa-info-circle"></i>Tip 5</h1>
+					<h1 onclick="openPop('tip6')"><i class="fa fa-info-circle"></i>Tip 6</h1>
+					<h1 onclick="openPop('tip7')"><i class="fa fa-info-circle"></i>Tip 7</h1>
+					<h1 onclick="openPop('tip8')"><i class="fa fa-info-circle"></i>Tip 8</h1>
+					<h1 onclick="openPop('tip9')"><i class="fa fa-info-circle"></i>Tip 9</h1>
+					<h1 onclick="openPop('tip10')"><i class="fa fa-info-circle"></i>Tip 10</h1>
+				</div>
+				<div class="tips">
+					<h1 onclick="openPop('tip11')"><i class="fa fa-info-circle"></i>Tip 11</h1>
+					<h1 onclick="openPop('tip12')"><i class="fa fa-info-circle"></i>Tip 12</h1>
+					<h1 onclick="openPop('tip13')"><i class="fa fa-info-circle"></i>Tip 13</h1>
+					<h1 onclick="openPop('tip14')"><i class="fa fa-info-circle"></i>Tip 14</h1>
+					<h1 onclick="openPop('tip15')"><i class="fa fa-info-circle"></i>Tip 15</h1>
+					<h1 onclick="openPop('tip16')"><i class="fa fa-info-circle"></i>Tip 16</h1>
+					<h1 onclick="openPop('tip17')"><i class="fa fa-info-circle"></i>Tip 17</h1>
+					<h1 onclick="openPop('tip18')"><i class="fa fa-info-circle"></i>Tip 18</h1>
+					<h1 onclick="openPop('tip19')"><i class="fa fa-info-circle"></i>Tip 19</h1>
+					<h1 onclick="openPop('tip20')"><i class="fa fa-info-circle"></i>Tip 20</h1>
+				</div>
+			</section>
+		</div>
+
+		<div class="popup" id="tip1">
+			<h1 class="close" onclick="closePop('tip1')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Jugo Verde 1</h1>
+			<h4>1/2 taza de frutos rojos congelados <br><br> 1/2 nopal congelado<br><br>1/2 de taza de
+			espinaca <br><br>1 naranja en gajos  <br><br>1 vaso con agua <br><br> 1 jugo de un limón
+			</h4>
+			<b>SI EL JUGO ES ESPESO, REBAJAR CON AGUA</b>
+		</div>
+		<div class="popup" id="tip2">
+			<h1 class="close" onclick="closePop('tip2')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Jugo Verde 2</h1>
+			<h4>1 taza de espinaca <br><br> 1 vaso de agua de coco + 1/2 taza de mango congelado <br><br>
+			1/2 taza de piña <br><br> 1/2 naranja en gajos <br><br> 1 jugo de un limón</h4>
+
+			<b>SI EL JUGO ES ESPESO, REBAJAR CON AGUA</b>
+		</div>
+		<div class="popup" id="tip3">
+			<h1 class="close" onclick="closePop('tip3')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Jugo Verde 3</h1>
+			<h4>1 taza de espinaca <br><br> 1/2 taza de fresas <br><br> 1/2 taza de frutos rojos <br><br> 1 naranja
+			en gajos <br><br> 1 cucharada de chía
+			</h4>
+			<b>SI EL JUGO ES ESPESO, REBAJAR CON AGUA</b>
+		</div>
+		<div class="popup" id="tip4">
+			<h1 class="close" onclick="closePop('tip4')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Jugo Verde 4</h1>
+			<h4>2 naranja en gajos <br><br> 1/4 de pepino <br><br> 1 ramita de apio <br><br> 1/4 taza de perejil <br><br>
+			1/2 taza de piña <br><br> 1/2 taza de espinaca <br><br> 1 jugo de limón
+			</h4>
+			<b>SI EL JUGO ES ESPESO, REBAJAR CON AGUA</b>
+		</div>
+		<div class="popup" id="tip5">
+			<h1 class="close" onclick="closePop('tip5')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Jugo Verde 5</h1>
+			<h4>1 taza de espinaca <br><br> 1/2 zabahoria <br><br> 1/$ de betabel <br><br> 1/4 de taza de fresas
+			frescas o congeladas <br><br> 1/4 taza de menta fresca <br><br> 1 jugo de un limón</h4>
+			<b>SI EL JUGO ES ESPESO, REBAJAR CON AGUA</b>
+		</div>
+		<div class="popup" id="tip6">
+			<h1 class="close" onclick="closePop('tip6')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Jugo Verde 6</h1>
+			<h4>1 taza de espinaca <br><br> 1/2 taza de jitomate <br><br> 1 rama de apio <br><br> 1 jugo de un
+			limón <br><br> 1 naranaja en gajos <br><br> 1 vaso con agua
+			</h4>
+			<b>SI EL JUGO ES ESPESO, REBAJAR CON AGUA</b>
+		</div>
+
+		<div class="popup" id="tip7">
+			<h1 class="close" onclick="closePop('tip7')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Tipo de Grasas</h1>
+			<h4>
+				Recuerda que las grasas están divididas en “grasas malas” y “grasas buenas”. Mientras comas grasas buenas todo es mejor ya que ayudan a cuidar el corazón. <br><br>
+				<b>Se encuentran en:</b> <br>
+				<b>•</b>	El aceite de oliva<br>
+				<b>•</b>	El aceite de nabina <br>
+				<b>•</b>	Algunos frutos secos, como las nueces de Brasil<br>
+				<b>•</b>	El aguacate<br>
+
+			</h4>
+		</div>
+		<div class="popup" id="tip8">
+			<h1 class="close" onclick="closePop('tip8')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">¿Qué requiere nuestro cuerpo?</h1>
+			<h4>
+				Recuerda que un buen cuerpo requiere de 80% alimentación y 20% ejercicio.				
+			</h4>
+		</div>
+		<div class="popup" id="tip9">
+			<h1 class="close" onclick="closePop('tip9')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Macronutrientes</h1>
+			<h4>
+				Los <b>MACRONUTRIENTES</b> son aquellas sustancias que proporcionan energía al organismo para un buen funcionamiento, y otros elementos necesarios para reparar y construir estructuras orgánicas, para promover el crecimiento y para regular procesos metabólicos. <br><br>
+				<b>Este grupo está constituido por: </b><br>
+				<b>•</b>	Proteínas <br>
+				<b>•</b>	Grasas <br>
+				<b>•</b>	Hidratos de Carbono <br><br>
+				<b>PROTEÍNAS: </b><br>
+				Son los componentes de las estructuras de las células. Las necesidades de un adulto sano y sedentario son 0,8-1 g/kg/día. Nos aportan 4 kcalorías/gramo. Se recomienda entre un 10-15% del total de las calorías de la dieta en forma de proteínas en una dieta equilibrada. <br><br>
+				<b>GRASAS:</b><br>
+				Son el nutriente energético por excelencia. Este grupo está formado por los triglicéridos, los fosfolípidos y el colesterol. Constituyen el 30-35% de una dieta equilibrada. Aportan 9 kcal/gramo. <br><br>
+				<b>HIDRATOS DE CARBONO:</b><br>
+				Son una fuente importante de energía y proceden fundamentalmente de los vegetales. La ingesta en un adulto sano recomendada es de 3-5 g/kg/día. Aportan 4 kcal/gramo.
+			</h4>
+		</div>
+		<div class="popup" id="tip14">
+			<h1 class="close" onclick="closePop('tip14')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Desplantes</h1>
+			
+			<img src="media/ejercicios/desplantes.jpg">
+		</div>
+		<div class="popup" id="tip10">
+			<h1 class="close" onclick="closePop('tip10')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Aprovecha!</h1>
+			<h4>
+				Al tener un día libre en tu plan alimenticio, aprovéchalo y come lo que quieras. <br><br> Será bueno para tu mente y cuerpo.
+			</h4>
+		</div>
+		<div class="popup" id="tip11">
+			<h1 class="close" onclick="closePop('tip11')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Disfruta!</h1>
+			<h4>
+				No sufras con una dieta y disfruta de un estilo de vida saludable.
+			</h4>
+		</div>
+		<div class="popup" id="tip12">
+			<h1 class="close" onclick="closePop('tip12')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">¿Sabías que ...?</h1>
+			<h4>
+				El ejercicio de cardio quema energía y grasa. <br><br>
+				El ejercicio de fuerza aumenta musculatura.
+			</h4>
+		</div>
+		<div class="popup" id="tip13">
+			<h1 class="close" onclick="closePop('tip13')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Recuerda...</h1>
+			<h4>
+				Recuerda hacer cardio al menos 5 días a la semana. <br><br> 
+				<b> Algunos ejemplos de cardio son:</b><br>
+
+				<b>•</b>	Correr <br>		
+				<b>•</b>	Saltar <br>		
+				<b>•</b>	Caminar  <br>		
+				<b>•</b>	Bicicleta <br>		
+				<b>•</b>	Nadar <br>		
+				<b>•</b>	Deportes (basketball, volleyball, football, tenis, étc) <br>		
+
+			</h4>
+		</div>
+		<div class="popup" id="tip15">
+			<h1 class="close" onclick="closePop('tip15')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Burpees</h1>
+			<img src="media/ejercicios/burpees.jpg">
+		</div>
+		<div class="popup" id="tip16">
+			<h1 class="close" onclick="closePop('tip16')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Sentadillas</h1>
+			<img src="media/ejercicios/sentadillas.jpg">
+		</div>
+		<div class="popup" id="tip17">
+			<h1 class="close" onclick="closePop('tip17')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Lagartijas</h1>
+			<img src="media/ejercicios/lagartijas.jpg">
+		</div>
+		<div class="popup" id="tip18">
+			<h1 class="close" onclick="closePop('tip18')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Saltos de Escalones</h1>
+			<img src="media/ejercicios/salto.jpg">
+		</div>
+		<div class="popup" id="tip19">
+			<h1 class="close" onclick="closePop('tip19')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Abdominales</h1>
+			<img src="media/ejercicios/abdominales.jpg">
+			<h4>Recuerda que los abdominales ejercitan tu abdomen más no te adelgazan. <br><br> Para adelgazar hay que hacer una buena dieta y una combinación de ejercicios adecuada.</h4>
+		</div>
+		<div class="popup" id="tip20">
+			<h1 class="close" onclick="closePop('tip20')"><i class="fa fa-times"></i></h1>
+			<h1 class="title">Tríceps</h1>
+			<img src="media/ejercicios/triceps.jpg">
+		</div>
+</body>
+</html>

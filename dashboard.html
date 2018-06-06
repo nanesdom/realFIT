@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>realFit</title>		
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script src="js/funciones.js"></script>
+	<script src="js/dashboard.js"></script>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="favicon.png">
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self'; 
+		script-src 'self' 'unsafe-inline'; 
+		style-src 'self' ; 
+		img-src *; 
+		font-src *;
+		connect-src *
+	">
+</head>
+<body onload="variable(), cargarContenido(), dia(), cargarMenu(), validarFirst(), cargarDash()">
+	<div class="contenedor" id="contenedor">
+		<header>
+			<section class="right">
+				<i class="fa fa-leaf"></i>real<B>FIT</b>
+			</section>
+			<section class="left">
+				<i class="fa fa-bars" id="btnMenu" onclick="menu()"></i>
+			</section>
+		</header>
+		<div class="menu inactive" id="menu">
+			<span class="perfil">
+				<div class="imgPerfil">
+					<img src="media/male.jpg" id="fotoperfil">
+				</div>
+				<div class="dataPerfil">
+					<h1 id="tunombre">Daniel Domínguez</h1>
+					<h3 id="tuuser">@nanesdom</h3>
+					<h3 id="tuedad">21 años</h3>
+					<h3 id="tupeso">80 Kg</h3>					
+				</div>
+			</span>
+			<span class="boton" onclick="ir('#')">
+				<i class="fa fa-home"></i>Inicio
+			</span>
+			<span class="boton" onclick="ir('perfil.html')">
+				<i class="fa fa-user"></i>Perfil
+			</span>
+			<span class="boton" onclick="ir('tips.html')">
+				<i class="fa fa-heartbeat"></i>Tips
+			</span>
+			<span class="boton" onclick="salir()">
+				<i class="fa fa-sign-out"></i>Salir
+			</span>
+		</div>
+
+		<div class="contenido">
+			<section class="objective">
+				<h1 id="tuobjetivo">Perder Grasa</h1>
+				<img src="media/perder.jpeg" id="imgobjetivo">
+			</section>
+			<section class="day">
+				<div class="days">
+					<span class="dia" id="Monday">Lunes</span>
+					<span class="dia" id="Tuesday">Martes</span>
+					<span class="dia" id="Wednesday">Miércoles</span>
+					<span class="dia" id="Thursday">Jueves</span>
+					<span class="dia" id="Friday">Viernes</span>
+					<span class="dia" id="Saturday">Sábado</span>
+					<span class="dia" id="Sunday">Domíngo</span>
+				</div>
+				<div class="plan">
+					<h1>Dieta</h1>
+						<div class="diet" onclick="ir('dieta.html')">
+							<!-- <iframe src="dietas/Endomorfo/Baja.pdf#page=1" width="100%" height="100%" type="application/pdf">
+								This browser does not support PDFs. Please download the PDF to view it: <a href="dietas/Endomorfo/Baja.pdf">Download PDF</a>
+							</iframe> -->
+							<!-- <a href="dietas/Endomorfo/Baja.pdf">ver</a> -->
+							<i class="fa fa-eye"></i>Ver dieta
+							<!-- <a href="#" onclick="openPDF()">Ver dieta</a> -->
+						</div>
+					<h1>Ejercicio</h1>
+						<div class="diet" onclick="ir('ejercicio.html')">		
+							<i class="fa fa-eye"></i>Ver ejercicio					
+						</div>
+				</div>
+			</section>
+		</div>
+</body>
+</html>

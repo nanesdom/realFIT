@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>realFit</title>	
+	<meta charset="utf-8">	
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script src="js/funciones.js"></script>
+	<script src="js/login.js"></script>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="favicon.png">
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self'; 
+		script-src 'self' 'unsafe-inline'; 
+		style-src 'self' ; 
+		img-src *; 
+		font-src *;
+		connect-src *
+	">
+</head>
+<body onload="variable2(), cargarIndex()">
+	<div id="mensaje"></div>
+	<div id="mensaje2"></div>
+	<img src="media/logo.png" class="logoMain" id="logoMain">
+
+	<div class="cont" id="contIndex">
+		<section class="login" id="login">
+			<input type="text" name="" id="username" placeholder="Usuario">
+			<input type="password" name="" id="password" placeholder="Contraseña">
+		</section>
+		<section class="signup" id="signup">
+			<input type="text" name="" id="name" placeholder="Nombre">
+			<input type="text" name="" id="user" placeholder="Usuario">
+			<input type="password" name="" id="pass" placeholder="Contraseña">
+			<input type="password" name="" id="pass2" placeholder="Confirmar Contraseña">
+		</section>
+		<section class="btnLog" id="btnLog">
+			<button class="btn1" onclick="entrar()">Iniciar Sesión</button>
+			<button class="btn2" onclick="signPOP()">Registrarme</button>
+		</section>
+		<section class="btnSign" id="btnSign">
+			<button class="btn1" onclick="registrarme()">Registrarme</button>
+			<button class="btn2" onclick="logPOP()">Ya tengo una cuenta</button>
+		</section>
+	</div>
+</body>
+</html>
